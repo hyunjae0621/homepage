@@ -29,9 +29,8 @@ const Navbar = ({ isScrolled }) => {
   }, [isOpen]);
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-    }`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg' : 'bg-white shadow-lg'
+      }`}>
       <div className="max-w-[430px] mx-auto relative h-[60px] flex items-center justify-center">
         {/* 햄버거 메뉴 버튼 */}
         <button
@@ -67,9 +66,8 @@ const Navbar = ({ isScrolled }) => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className={`block px-6 py-3 text-left hover:bg-gray-50 transition-colors duration-200 ${
-                  activeSection === item.id ? 'text-primary-600 font-semibold' : 'text-gray-700'
-                }`}
+                className={`block px-6 py-3 text-left hover:bg-gray-50 transition-colors duration-200 ${activeSection === item.id ? 'text-primary-600 font-semibold' : 'text-gray-700'
+                  }`}
                 onClick={() => {
                   setIsOpen(false);
                   setActiveSection(item.id);
